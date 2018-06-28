@@ -17,5 +17,7 @@ public class TestConcurrentHashMap {
         System.out.println(cmap.get("name"));
         cmap.putIfAbsent("name", "tracy");
         System.out.println(cmap.get("name"));
+        cmap.clear();
+        System.out.println(cmap.isEmpty());
     }
 }
