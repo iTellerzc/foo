@@ -40,13 +40,16 @@ public class DisruptorMain {
 
         //获取RingBuffer
         RingBuffer<HelloEvent> ringBuffer = disruptor.getRingBuffer();
+
         //请求下一个事件序号
         long sequence = ringBuffer.next();
-        HelloEvent helloEvent = disruptor.get(sequence);
-        //设置事件内容
-        helloEvent.setValue("send data: hello world!");
-        //发布事件
-        ringBuffer.publish(sequence);
-
+        try{
+            HelloEvent helloEvent = disruptor.get(sequence);
+            //设置事件内容
+            helloEvent.setValue("send data: hello world!");
+        }finally {
+            //发布事件
+            ringBuffer.publish(sequence);
+        }
     }
 }

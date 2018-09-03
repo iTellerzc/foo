@@ -15,7 +15,7 @@ public class Foo {
         //System.out.println(UUID.randomUUID().toString());
         int b =16;
         System.out.println((byte) b);
-
+        System.out.println(Integer.bitCount(12));
 
     }
 }

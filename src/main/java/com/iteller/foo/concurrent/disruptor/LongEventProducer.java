@@ -21,11 +21,9 @@ public class LongEventProducer {
      */
     public void onData(ByteBuffer bb){
         long sequence = ringBuffer.next();
-        System.out.println("seq:" + sequence);
         try{
             LongEvent longEvent = ringBuffer.get(sequence);
-            System.out.println("value :" + bb.get(0));
-            longEvent.setValue(bb.get(0));
+            longEvent.setValue(bb.get());
         }finally {
             ringBuffer.publish(sequence);
         }
