@@ -1,4 +1,4 @@
-package com.iteller.foo.condition;
+package com.iteller.foo.concurrent.condition;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -22,5 +22,7 @@ public class MyCondition {
         for(int i=0;i<5;i++){
             business.main();
         }
+
+        executorService.shutdown();
     }
 }

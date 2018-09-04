@@ -18,5 +18,9 @@ public class YieldThread extends Thread{
            }
        }
     }
+
+    public static void main(String[] args){
+        new YieldThread("YieldThread").start();
+    }
 }
 

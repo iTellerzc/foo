@@ -32,7 +32,6 @@ public class RWLockExample {
                 rwl.writeLock().unlock();
             }
         }
-
         try{
             System.out.println("data:" + data);
         }finally {

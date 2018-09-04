@@ -1,4 +1,4 @@
-package com.iteller.foo.tl;
+package com.iteller.foo.concurrent.tl;
 
 /**
  * Created by 18060903 on 2018/9/3.

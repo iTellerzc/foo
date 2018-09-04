@@ -1,4 +1,4 @@
-package com.iteller.foo.tl;
+package com.iteller.foo.concurrent.tl;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

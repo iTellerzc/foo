@@ -1,4 +1,4 @@
-package com.iteller.foo.condition;
+package com.iteller.foo.concurrent.condition;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
